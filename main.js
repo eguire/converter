@@ -2,7 +2,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	const unitSelect = document.querySelector('.converter__select'),
 				upperUnitSelect = document.querySelector('#converter__upper-select'),
-				lowerUnitSelect = document.querySelector('#converter__lower-select');
+				lowerUnitSelect = document.querySelector('#converter__lower-select'),
+				upperInput = document.querySelector('#converter__upper-input'),
+				lowerInput = document.querySelector('#converter__lower-input');
 	const units = {
 		length: [
 			{ nauticalMile: 'Nautical Mile' },
@@ -51,12 +53,12 @@ window.addEventListener("DOMContentLoaded", () => {
 	};
 
 	unitSelect.addEventListener('input', () => {
-		upperUnitSelect.innerHTML = '';
-		lowerUnitSelect.innerHTML = '';
 		createNewOptions(upperUnitSelect);
 		createNewOptions(lowerUnitSelect);
 
 		function createNewOptions(select) {
+			select.innerHTML = '';
+
 			units[unitSelect.value].forEach(element => {
 				const newOption = document.createElement('option');
 				newOption.setAttribute('value', `${Object.keys(element)}`);
@@ -67,11 +69,11 @@ window.addEventListener("DOMContentLoaded", () => {
 		
 	});
 
-	upperUnitSelect.addEventListener('input', () => {
-
+	upperInput.addEventListener('input', () => {
+		console.log('Test Up')
 	});
 
-	lowerUnitSelect.addEventListener('input', () => {
-
+	lowerInput.addEventListener('input', () => {
+		console.log('Test Down')
 	});
 });
