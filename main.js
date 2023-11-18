@@ -70,10 +70,58 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	upperInput.addEventListener('input', () => {
-		console.log('Test Up')
+		let funcName = `${upperUnitSelect.value}To${lowerUnitSelect.value}`;
+
+		if (upperUnitSelect.value === lowerUnitSelect.value) {
+			lowerInput.value = upperInput.value;
+		} else {
+			lowerInput.value = (eval(funcName)(upperInput)).toFixed(2);
+		}
 	});
 
 	lowerInput.addEventListener('input', () => {
-		console.log('Test Down')
+		let funcName = `${lowerUnitSelect.value}To${upperUnitSelect.value}`;
+
+		if (upperUnitSelect.value === lowerUnitSelect.value) {
+			upperInput.value = lowerInput.value;
+		} else {
+			upperInput.value = (eval(funcName)(lowerInput)).toFixed(2);
+		}
 	});
+
+	// Length
+
+	function centimeterTometer(field) {
+		return field.value / 100;
+	};
+
+	function meterTocentimeter(field) {
+		return field.value * 100;
+	};
+
+	// Temperature
+
+	function degreeCelsiusTofahrenheit(field) {
+		return (field.value * (9 / 5)) + 32;
+	};
+
+	function fahrenheitTodegreeCelsius(field) {
+		return (field.value - 32) * (5 / 9);
+	};
+
+	function degreeCelsiusTokelvin(field) {
+		return +(field.value) + 273.15;
+	};
+
+	function kelvinTodegreeCelsius(field) {
+		return field.value - 273.15;
+	};
+
+	function fahrenheitTokelvin(field) {
+		return (field.value - 32) * (5 / 9) + 273.15;
+	};
+
+	function kelvinTofahrenheit(field) {
+		return (field.value - 273.15) * (9 / 5) + 32;
+	}
 });
