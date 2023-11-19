@@ -66,7 +66,6 @@ window.addEventListener("DOMContentLoaded", () => {
 				select.append(newOption);
 			});
 		};
-		
 	});
 
 	upperUnitSelect.addEventListener('input', () => {
@@ -87,6 +86,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	function countUnits(unitFrom, unitTo, operatedInput, valueTo) {
 		let funcName = `${unitFrom.value}To${unitTo.value}`;
+
+		operatedInput.value = operatedInput.value.replace(/\D/, '');
 
 		if (operatedInput.value === '' || unitFrom.value === unitTo.value) {
 			valueTo.value = operatedInput.value;
