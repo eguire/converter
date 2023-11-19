@@ -69,25 +69,31 @@ window.addEventListener("DOMContentLoaded", () => {
 		
 	});
 
-	upperInput.addEventListener('input', () => {
-		let funcName = `${upperUnitSelect.value}To${lowerUnitSelect.value}`;
+	upperUnitSelect.addEventListener('input', () => {
+		countUnits(upperUnitSelect, lowerUnitSelect, upperInput, lowerInput);
+	});
 
-		if (upperUnitSelect.value === lowerUnitSelect.value) {
-			lowerInput.value = upperInput.value;
-		} else {
-			lowerInput.value = (eval(funcName)(upperInput)).toFixed(2);
-		}
+	lowerUnitSelect.addEventListener('input', () => {
+		countUnits(upperUnitSelect, lowerUnitSelect, upperInput, lowerInput);
+	});
+
+	upperInput.addEventListener('input', () => {
+		countUnits(upperUnitSelect, lowerUnitSelect, upperInput, lowerInput);
 	});
 
 	lowerInput.addEventListener('input', () => {
-		let funcName = `${lowerUnitSelect.value}To${upperUnitSelect.value}`;
-
-		if (upperUnitSelect.value === lowerUnitSelect.value) {
-			upperInput.value = lowerInput.value;
-		} else {
-			upperInput.value = (eval(funcName)(lowerInput)).toFixed(2);
-		}
+		countUnits(lowerUnitSelect, upperUnitSelect, lowerInput, upperInput);
 	});
+
+	function countUnits(unitFrom, unitTo, operatedInput, valueTo) {
+		let funcName = `${unitFrom.value}To${unitTo.value}`;
+
+		if (operatedInput.value === '' || unitFrom.value === unitTo.value) {
+			valueTo.value = operatedInput.value;
+		} else {
+			valueTo.value = (eval(funcName)(operatedInput)).toFixed(2);
+		}
+	};
 
 	// Length
 
