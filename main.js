@@ -92,11 +92,91 @@ window.addEventListener("DOMContentLoaded", () => {
 		if (operatedInput.value === '' || unitFrom.value === unitTo.value) {
 			valueTo.value = operatedInput.value;
 		} else {
-			valueTo.value = +(eval(funcName)(operatedInput)).toFixed(2);
+			valueTo.value = +(eval(funcName)(operatedInput)).toFixed(5);
 		}
 	};
 
 	// Length
+
+	function nauticalMileToInch(field) {
+		return field.value * 72910;
+	}
+
+	function nauticalMileToFoot(field) {
+		return field.value * 6076;
+	}
+
+	function nauticalMileToYard(field) {
+		return field.value * 2025;
+	}
+
+	function nauticalMileToMile(field) {
+		return field.value * 1.151;
+	}
+
+	function nauticalMileToNanometre(field) {
+		return field.value * 1852000000000;
+	}
+
+	function nauticalMileToMicrometres(field) {
+		return field.value * 1852000000;
+	}
+
+	function nauticalMileToMillimetre(field) {
+		return field.value * 1852000;
+	}
+
+	function nauticalMileToCentimeter(field) {
+		return field.value * 185200;
+	}
+
+	function nauticalMileToMeter(field) {
+		return field.value * 1852;
+	}
+
+	function nauticalMileToKilometre(field) {
+		return field.value * 1.852;
+	}
+
+	function inchToNauticalMile(field) {
+		return field.value / 72910;
+	}
+
+	function inchToFoot(field) {
+		return field.value / 12;
+	}
+
+	function inchToYard(field) {
+		return field.value / 36;
+	}
+
+	function inchToMile(field) {
+		return field.value / 63360;
+	}
+
+	function inchToNanometre(field) {
+		return field.value * 25400000;
+	}
+
+	function inchToMicrometres(field) {
+		return field.value * 25400;
+	}
+
+	function inchToMillimetre(field) {
+		return field.value * 25.4;
+	}
+
+	function inchToCentimeter(field) {
+		return field.value * 2.54;
+	}
+
+	function inchToMeter(field) {
+		return field.value / 39.37;
+	}
+
+	function inchToKilometre(field) {
+		return field.value / 39370;
+	}
 
 	function centimeterToMeter(field) {
 		return field.value / 100;
