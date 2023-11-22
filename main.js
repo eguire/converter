@@ -85,50 +85,50 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	function countUnits(unitFrom, unitTo, operatedInput, valueTo) {
-		let funcName = `${unitFrom.value}To${unitTo.value}`;
+		let funcName = `${unitFrom.value}To${unitTo.value.split('').map((char, i) => i === 0 ? char.toUpperCase() : char).join('')}`; // Get function name from selects and capitalize first char after 'To'
 
-		operatedInput.value = operatedInput.value.replace(/\D/, '');
+		operatedInput.value = operatedInput.value.replace(/[^-.\d]/, ''); // Left only minus, digits and dot
 
 		if (operatedInput.value === '' || unitFrom.value === unitTo.value) {
 			valueTo.value = operatedInput.value;
 		} else {
-			valueTo.value = (eval(funcName)(operatedInput)).toFixed(2);
+			valueTo.value = +(eval(funcName)(operatedInput)).toFixed(2);
 		}
 	};
 
 	// Length
 
-	function centimeterTometer(field) {
+	function centimeterToMeter(field) {
 		return field.value / 100;
 	};
 
-	function meterTocentimeter(field) {
+	function meterToCentimeter(field) {
 		return field.value * 100;
 	};
 
 	// Temperature
 
-	function degreeCelsiusTofahrenheit(field) {
+	function degreeCelsiusToFahrenheit(field) {
 		return (field.value * (9 / 5)) + 32;
 	};
 
-	function fahrenheitTodegreeCelsius(field) {
+	function fahrenheitToDegreeCelsius(field) {
 		return (field.value - 32) * (5 / 9);
 	};
 
-	function degreeCelsiusTokelvin(field) {
+	function degreeCelsiusToKelvin(field) {
 		return +(field.value) + 273.15;
 	};
 
-	function kelvinTodegreeCelsius(field) {
+	function kelvinToDegreeCelsius(field) {
 		return field.value - 273.15;
 	};
 
-	function fahrenheitTokelvin(field) {
+	function fahrenheitToKelvin(field) {
 		return (field.value - 32) * (5 / 9) + 273.15;
 	};
 
-	function kelvinTofahrenheit(field) {
+	function kelvinToFahrenheit(field) {
 		return (field.value - 273.15) * (9 / 5) + 32;
 	}
 });
