@@ -92,7 +92,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		if (operatedInput.value === '' || unitFrom.value === unitTo.value) {
 			valueTo.value = operatedInput.value;
 		} else {
-			valueTo.value = +(eval(funcName)(operatedInput)).toFixed(5);
+			valueTo.value = +(eval(funcName)(operatedInput)).toFixed(7);
 		}
 	};
 
@@ -176,6 +176,46 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	function inchToKilometre(field) {
 		return field.value / 39370;
+	}
+
+	function footToNauticalMile(field) {
+		return field.value / 6076;
+	}
+
+	function footToInch(field) {
+		return field.value * 12;
+	}
+
+	function footToYard(field) {
+		return field.value / 3;
+	}
+
+	function footToMile(field) {
+		return field.value / 5280;
+	}
+
+	function footToNanometre(field) {
+		return field.value * 304800000;
+	}
+
+	function footToMicrometres(field) {
+		return field.value * 304800;
+	}
+
+	function footToMillimetre(field) {
+		return field.value * 304.8;
+	}
+
+	function footToCentimeter(field) {
+		return field.value * 30.48;
+	}
+
+	function footToMeter(field) {
+		return field.value / 3.281;
+	}
+
+	function footToKilometre(field) {
+		return field.value / 3281;
 	}
 
 	function centimeterToMeter(field) {
