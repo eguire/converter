@@ -218,6 +218,46 @@ window.addEventListener("DOMContentLoaded", () => {
 		return field.value / 3281;
 	}
 
+	function yardToNauticalMile(field) {
+		return field.value / 2025;
+	}
+
+	function yardToInch(field) {
+		return field.value * 36;
+	}
+
+	function yardToFoot(field) {
+		return field.value * 3;
+	}
+
+	function yardToMile(field) {
+		return field.value / 1760;
+	}
+
+	function yardToNanometre(field) {
+		return field.value * 914400000;
+	}
+
+	function yardToMicrometres(field) {
+		return field.value * 914400;
+	}
+
+	function yardToMillimetre(field) {
+		return field.value * 914.4;
+	}
+
+	function yardToCentimeter(field) {
+		return field.value * 91.44;
+	}
+
+	function yardToMeter(field) {
+		return field.value / 1.094;
+	}
+
+	function yardToKilometre(field) {
+		return field.value / 1094;
+	}
+
 	function centimeterToMeter(field) {
 		return field.value / 100;
 	};
