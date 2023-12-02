@@ -12,12 +12,12 @@ window.addEventListener("DOMContentLoaded", () => {
 			{ foot: 'Foot' },
 			{ yard: 'Yard' },
 			{ mile: 'Mile' },
-			{ nanometre: 'Nanometre' },
-			{ micrometres: 'Micrometres' },
-			{ millimetre: 'Millimetre' },
+			{ nanometer: 'Nanometer' },
+			{ micrometers: 'Micrometers' },
+			{ millimeter: 'Millimeter' },
 			{ centimeter: 'Centimeter' },
 			{ meter: 'Meter' },
-			{ kilometre: 'Kilometre' }
+			{ kilometer: 'Kilometer' }
 		],
 		mass: [
 			{ ounce: 'Ounce' },
@@ -92,7 +92,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		if (operatedInput.value === '' || unitFrom.value === unitTo.value) {
 			valueTo.value = operatedInput.value;
 		} else {
-			valueTo.value = +(eval(funcName)(operatedInput)).toFixed(7);
+			valueTo.value = +(eval(funcName)(operatedInput)).toFixed(10);
 		}
 	};
 
@@ -114,15 +114,15 @@ window.addEventListener("DOMContentLoaded", () => {
 		return field.value * 1.151;
 	}
 
-	function nauticalMileToNanometre(field) {
+	function nauticalMileToNanometer(field) {
 		return field.value * 1852000000000;
 	}
 
-	function nauticalMileToMicrometres(field) {
+	function nauticalMileToMicrometers(field) {
 		return field.value * 1852000000;
 	}
 
-	function nauticalMileToMillimetre(field) {
+	function nauticalMileToMillimeter(field) {
 		return field.value * 1852000;
 	}
 
@@ -134,7 +134,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		return field.value * 1852;
 	}
 
-	function nauticalMileToKilometre(field) {
+	function nauticalMileToKilometer(field) {
 		return field.value * 1.852;
 	}
 
@@ -154,15 +154,15 @@ window.addEventListener("DOMContentLoaded", () => {
 		return field.value / 63360;
 	}
 
-	function inchToNanometre(field) {
+	function inchToNanometer(field) {
 		return field.value * 25400000;
 	}
 
-	function inchToMicrometres(field) {
+	function inchToMicrometers(field) {
 		return field.value * 25400;
 	}
 
-	function inchToMillimetre(field) {
+	function inchToMillimeter(field) {
 		return field.value * 25.4;
 	}
 
@@ -174,7 +174,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		return field.value / 39.37;
 	}
 
-	function inchToKilometre(field) {
+	function inchToKilometer(field) {
 		return field.value / 39370;
 	}
 
@@ -194,15 +194,15 @@ window.addEventListener("DOMContentLoaded", () => {
 		return field.value / 5280;
 	}
 
-	function footToNanometre(field) {
+	function footToNanometer(field) {
 		return field.value * 304800000;
 	}
 
-	function footToMicrometres(field) {
+	function footToMicrometers(field) {
 		return field.value * 304800;
 	}
 
-	function footToMillimetre(field) {
+	function footToMillimeter(field) {
 		return field.value * 304.8;
 	}
 
@@ -214,7 +214,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		return field.value / 3.281;
 	}
 
-	function footToKilometre(field) {
+	function footToKilometer(field) {
 		return field.value / 3281;
 	}
 
@@ -234,15 +234,15 @@ window.addEventListener("DOMContentLoaded", () => {
 		return field.value / 1760;
 	}
 
-	function yardToNanometre(field) {
+	function yardToNanometer(field) {
 		return field.value * 914400000;
 	}
 
-	function yardToMicrometres(field) {
+	function yardToMicrometers(field) {
 		return field.value * 914400;
 	}
 
-	function yardToMillimetre(field) {
+	function yardToMillimeter(field) {
 		return field.value * 914.4;
 	}
 
@@ -254,39 +254,311 @@ window.addEventListener("DOMContentLoaded", () => {
 		return field.value / 1.094;
 	}
 
-	function yardToKilometre(field) {
+	function yardToKilometer(field) {
 		return field.value / 1094;
+	}
+
+	function mileToNauticalMile(field) {
+		return field.value / 1.151;
+	}
+
+	function mileToInch(field) {
+		return field.value * 63360;
+	}
+
+	function mileToFoot(field) {
+		return field.value * 5280;
+	}
+
+	function mileToYard(field) {
+		return field.value * 1760;
+	}
+
+	function mileToNanometer(field) {
+		return field.value * 1609344000000;
+	}
+
+	function mileToMicrometers(field) {
+		return field.value * 1609344000;
+	}
+
+	function mileToMillimeter(field) {
+		return field.value * 1609344;
+	}
+
+	function mileToCentimeter(field) {
+		return field.value * 160900;
+	}
+
+	function mileToMeter(field) {
+		return field.value * 1609;
+	}
+
+	function mileToKilometer(field) {
+		return field.value * 1.609;
+	}
+
+	function nanometerToNauticalMile(field) {
+		return field.value / 1852000000000;
+	}
+
+	function nanometerToInch(field) {
+		return field.value / 25400000;
+	}
+
+	function nanometerToFoot(field) {
+		return field.value / 304800000;
+	}
+
+	function nanometerToYard(field) {
+		return field.value / 914400000;
+	}
+
+	function nanometerToMile(field) {
+		return field.value / 1609344000000;
+	}
+
+	function nanometerToMicrometers(field) {
+		return field.value / 1000;
+	}
+
+	function nanometerToMillimeter(field) {
+		return field.value / 1000000;
+	}
+
+	function nanometerToCentimeter(field) {
+		return field.value / 10000000;
+	}
+
+	function nanometerToMeter(field) {
+		return field.value / 1000000000;
+	}
+
+	function nanometerToKilometer(field) {
+		return field.value / 1000000000000;
+	}
+
+	function micrometersToNauticalMile(field) {
+		return field.value / 1852000000;
+	}
+
+	function micrometersToInch(field) {
+		return field.value / 25400;
+	}
+
+	function micrometersToFoot(field) {
+		return field.value / 304800;
+	}
+
+	function micrometersToYard(field) {
+		return field.value / 914400;
+	}
+
+	function micrometersToMile(field) {
+		return field.value / 1609344000;
+	}
+
+	function micrometersToNanometer(field) {
+		return field.value * 1000;
+	}
+
+	function micrometersToMillimeter(field) {
+		return field.value / 1000;
+	}
+
+	function micrometersToCentimeter(field) {
+		return field.value / 10000;
+	}
+
+	function micrometersToMeter(field) {
+		return field.value / 1000000;
+	}
+
+	function micrometersToKilometer(field) {
+		return field.value / 1000000000;
+	}
+
+	function millimeterToNauticalMile(field) {
+		return field.value / 1852000;
+	}
+
+	function millimeterToInch(field) {
+		return field.value / 25.4;
+	}
+
+	function millimeterToFoot(field) {
+		return field.value / 304.8;
+	}
+
+	function millimeterToYard(field) {
+		return field.value / 914.4;
+	}
+
+	function millimeterToMile(field) {
+		return field.value / 1609344;
+	}
+
+	function millimeterToNanometer(field) {
+		return field.value * 1000000;
+	}
+
+	function millimeterToMicrometers(field) {
+		return field.value * 1000;
+	}
+
+	function millimeterToCentimeter(field) {
+		return field.value / 10;
+	}
+
+	function millimeterToMeter(field) {
+		return field.value / 1000;
+	}
+
+	function millimeterToKilometer(field) {
+		return field.value / 1000000;
+	}
+
+	function centimeterToNauticalMile(field) {
+		return field.value / 185200;
+	}
+
+	function centimeterToInch(field) {
+		return field.value / 2.54;
+	}
+
+	function centimeterToFoot(field) {
+		return field.value / 30.48;
+	}
+
+	function centimeterToYard(field) {
+		return field.value / 91.44;
+	}
+
+	function centimeterToMile(field) {
+		return field.value / 160900;
+	}
+
+	function centimeterToNanometer(field) {
+		return field.value * 10000000;
+	}
+
+	function centimeterToMicrometers(field) {
+		return field.value * 10000;
+	}
+
+	function centimeterToMillimeter(field) {
+		return field.value * 10;
 	}
 
 	function centimeterToMeter(field) {
 		return field.value / 100;
-	};
+	}
+
+	function centimeterToKilometer(field) {
+		return field.value / 100000;
+	}
+
+	function meterToNauticalMile(field) {
+		return field.value / 1852;
+	}
+
+	function meterToInch(field) {
+		return field.value * 39.37;
+	}
+
+	function meterToFoot(field) {
+		return field.value * 3.281;
+	}
+
+	function meterToYard(field) {
+		return field.value * 1.094;
+	}
+
+	function meterToMile(field) {
+		return field.value / 1609;
+	}
+
+	function meterToNanometer(field) {
+		return field.value * 1000000000;
+	}
+
+	function meterToMicrometers(field) {
+		return field.value * 1000000;
+	}
+
+	function meterToMillimeter(field) {
+		return field.value * 1000;
+	}
+
+	function meterToKilometer(field) {
+		return field.value / 1000;
+	}
 
 	function meterToCentimeter(field) {
 		return field.value * 100;
-	};
+	}
+
+	function kilometerToNauticalMile(field) {
+		return field.value / 1.852;
+	}
+
+	function kilometerToInch(field) {
+		return field.value * 39370;
+	}
+
+	function kilometerToFoot(field) {
+		return field.value * 3281;
+	}
+
+	function kilometerToYard(field) {
+		return field.value * 1094;
+	}
+
+	function kilometerToMile(field) {
+		return field.value / 1.609;
+	}
+
+	function kilometerToNanometer(field) {
+		return field.value * 1000000000000;
+	}
+
+	function kilometerToMicrometers(field) {
+		return field.value * 1000000000;
+	}
+
+	function kilometerToMillimeter(field) {
+		return field.value * 1000000;
+	}
+
+	function kilometerToCentimeter(field) {
+		return field.value * 100000;
+	}
+
+	function kilometerToMeter(field) {
+		return field.value * 1000;
+	}
 
 	// Temperature
 
 	function degreeCelsiusToFahrenheit(field) {
 		return (field.value * (9 / 5)) + 32;
-	};
+	}
 
 	function fahrenheitToDegreeCelsius(field) {
 		return (field.value - 32) * (5 / 9);
-	};
+	}
 
 	function degreeCelsiusToKelvin(field) {
 		return +(field.value) + 273.15;
-	};
+	}
 
 	function kelvinToDegreeCelsius(field) {
 		return field.value - 273.15;
-	};
+	}
 
 	function fahrenheitToKelvin(field) {
 		return (field.value - 32) * (5 / 9) + 273.15;
-	};
+	}
 
 	function kelvinToFahrenheit(field) {
 		return (field.value - 273.15) * (9 / 5) + 32;
