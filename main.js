@@ -538,6 +538,368 @@ window.addEventListener("DOMContentLoaded", () => {
 		return field.value * 1000;
 	}
 
+	// Mass
+
+	function ounceToPound(field) {
+		return field.value / 16;
+	}
+
+	function ounceToStone(field) {
+		return field.value / 224;
+	}
+
+	function ounceToUsTon(field) {
+		return field.value / 32000;
+	}
+
+	function ounceToImperialTon(field) {
+		return field.value / 35840;
+	}
+
+	function ounceToMicrogram(field) {
+		return field.value * 28349523.125;
+	}
+
+	function ounceToMilligram(field) {
+		return field.value * 28350;
+	}
+
+	function ounceToGram(field) {
+		return field.value * 28.35;
+	}
+
+	function ounceToKilogram(field) {
+		return field.value / 35.274;
+	}
+
+	function ounceToTonne(field) {
+		return field.value / 35270;
+	}
+
+	function poundToOunce(field) {
+		return field.value * 16;
+	}
+
+	function poundToStone(field) {
+		return field.value / 14;
+	}
+
+	function poundToUsTon(field) {
+		return field.value / 2000;
+	}
+
+	function poundToImperialTon(field) {
+		return field.value / 2240;
+	}
+
+	function poundToMicrogram(field) {
+		return field.value * 453592370;
+	}
+
+	function poundToMilligram(field) {
+		return field.value * 453600;
+	}
+
+	function poundToGram(field) {
+		return field.value * 453.6;
+	}
+
+	function poundToKilogram(field) {
+		return field.value / 2.205;
+	}
+
+	function poundToTonne(field) {
+		return field.value / 2205;
+	}
+
+	function stoneToOunce(field) {
+		return field.value * 224;
+	}
+
+	function stoneToPound(field) {
+		return field.value * 14;
+	}
+
+	function stoneToUsTon(field) {
+		return field.value / 142.9;
+	}
+
+	function stoneToImperialTon(field) {
+		return field.value / 160;
+	}
+
+	function stoneToMicrogram(field) {
+		return field.value * 5669904625;
+	}
+
+	function stoneToMilligram(field) {
+		return field.value * 6.35e+6;
+	}
+
+	function stoneToGram(field) {
+		return field.value * 6350;
+	}
+
+	function stoneToKilogram(field) {
+		return field.value * 6.35;
+	}
+
+	function stoneToTonne(field) {
+		return field.value / 157.5;
+	}
+
+	function usTonToOunce(field) {
+		return field.value * 32000;
+	}
+
+	function usTonToPound(field) {
+		return field.value * 2000;
+	}
+
+	function usTonToStone(field) {
+		return field.value * 142.9;
+	}
+
+	function usTonToImperialTon(field) {
+		return field.value / 1.12;
+	}
+
+	function usTonToMicrogram(field) {
+		return field.value * 9.072e+11;
+	}
+
+	function usTonToMilligram(field) {
+		return field.value * 9.072e+8;
+	}
+
+	function usTonToGram(field) {
+		return field.value * 907200;
+	}
+
+	function usTonToKilogram(field) {
+		return field.value * 907.2;
+	}
+
+	function usTonToTonne(field) {
+		return field.value / 1.102;
+	}
+
+	function imperialTonToOunce(field) {
+		return field.value * 35840;
+	}
+
+	function imperialTonToPound(field) {
+		return field.value * 2240;
+	}
+
+	function imperialTonToStone(field) {
+		return field.value * 160;
+	}
+
+	function imperialTonToUsTon(field) {
+		return field.value * 1.12;
+	}
+
+	function imperialTonToMicrogram(field) {
+		return field.value * 1.016e+12;
+	}
+
+	function imperialTonToMilligram(field) {
+		return field.value * 1.016e+9;
+	}
+
+	function imperialTonToGram(field) {
+		return field.value * 1.016e+6;
+	}
+
+	function imperialTonToKilogram(field) {
+		return field.value * 1016;
+	}
+
+	function imperialTonToTonne(field) {
+		return field.value * 1.016;
+	}
+
+	function microgramToOunce(field) {
+		return field.value / 2.835e+7;
+	}
+
+	function microgramToPound(field) {
+		return field.value / 4.536e+8;
+	}
+
+	function microgramToStone(field) {
+		return field.value / 6.35e+9;
+	}
+
+	function microgramToUsTon(field) {
+		return field.value / 9.072e+11;
+	}
+
+	function microgramToImperialTon(field) {
+		return field.value / 1.016e+12;
+	}
+
+	function microgramToMilligram(field) {
+		return field.value / 1000;
+	}
+
+	function microgramToGram(field) {
+		return field.value / 1e+6;
+	}
+
+	function microgramToKilogram(field) {
+		return field.value / 1e+9;
+	}
+
+	function microgramToTonne(field) {
+		return field.value / 1e+12;
+	}
+
+	function milligramToOunce(field) {
+		return field.value / 28350;
+	}
+
+	function milligramToPound(field) {
+		return field.value / 453600;
+	}
+
+	function milligramToStone(field) {
+		return field.value / 6.35e+6;
+	}
+
+	function milligramToUsTon(field) {
+		return field.value / 9.072e+8;
+	}
+
+	function milligramToImperialTon(field) {
+		return field.value / 1.016e+9;
+	}
+
+	function milligramToMicrogram(field) {
+		return field.value * 1000;
+	}
+
+	function milligramToGram(field) {
+		return field.value / 1000;
+	}
+
+	function milligramToKilogram(field) {
+		return field.value / 1e+6;
+	}
+
+	function milligramToTonne(field) {
+		return field.value / 1e+9;
+	}
+
+	function gramToOunce(field) {
+		return field.value / 28.35;
+	}
+
+	function gramToPound(field) {
+		return field.value / 453.6;
+	}
+
+	function gramToStone(field) {
+		return field.value / 6350;
+	}
+
+	function gramToUsTon(field) {
+		return field.value / 907200;
+	}
+
+	function gramToImperialTon(field) {
+		return field.value / 1.016e+6;
+	}
+
+	function gramToMicrogram(field) {
+		return field.value * 1e+6;
+	}
+
+	function gramToMilligram(field) {
+		return field.value * 1000;
+	}
+
+	function gramToKilogram(field) {
+		return field.value / 1000;
+	}
+
+	function gramToTonne(field) {
+		return field.value / 1e+6;
+	}
+
+	function kilogramToOunce(field) {
+		return field.value * 35.274;
+	}
+
+	function kilogramToPound(field) {
+		return field.value * 2.205;
+	}
+
+	function kilogramToStone(field) {
+		return field.value / 6.35;
+	}
+
+	function kilogramToUsTon(field) {
+		return field.value / 907.2;
+	}
+
+	function kilogramToImperialTon(field) {
+		return field.value / 1016;
+	}
+
+	function kilogramToMicrogram(field) {
+		return field.value * 1e+9;
+	}
+
+	function kilogramToMilligram(field) {
+		return field.value * 1e+6;
+	}
+
+	function kilogramToGram(field) {
+		return field.value * 1000;
+	}
+
+	function kilogramToTonne(field) {
+		return field.value / 1000;
+	}
+
+	function tonneToOunce(field) {
+		return field.value * 35270;
+	}
+
+	function tonneToPound(field) {
+		return field.value * 2205;
+	}
+
+	function tonneToStone(field) {
+		return field.value * 157.5;
+	}
+
+	function tonneToUsTon(field) {
+		return field.value * 1.102;
+	}
+
+	function tonneToImperialTon(field) {
+		return field.value / 1.016;
+	}
+
+	function tonneToMicrogram(field) {
+		return field.value * 1e+12;
+	}
+
+	function tonneToMilligram(field) {
+		return field.value * 1e+9;
+	}
+
+	function tonneToGram(field) {
+		return field.value * 1e+6;
+	}
+
+	function tonneToKilogram(field) {
+		return field.value * 1000;
+	}
+
 	// Temperature
 
 	function degreeCelsiusToFahrenheit(field) {
