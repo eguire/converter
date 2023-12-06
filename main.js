@@ -55,6 +55,8 @@ window.addEventListener("DOMContentLoaded", () => {
 	unitSelect.addEventListener('input', () => {
 		createNewOptions(upperUnitSelect);
 		createNewOptions(lowerUnitSelect);
+		
+		countUnits(upperUnitSelect, lowerUnitSelect, upperInput, lowerInput);
 
 		function createNewOptions(select) {
 			select.innerHTML = '';
@@ -92,7 +94,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		if (operatedInput.value === '' || unitFrom.value === unitTo.value) {
 			valueTo.value = operatedInput.value;
 		} else {
-			valueTo.value = +(eval(funcName)(operatedInput)).toFixed(10);
+			valueTo.value = +eval(funcName)(operatedInput).toFixed(20);
 		}
 	};
 
@@ -924,5 +926,535 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	function kelvinToFahrenheit(field) {
 		return (field.value - 273.15) * (9 / 5) + 32;
+	}
+
+	// Time
+
+	function nanosecondToMicrosecond(field) {
+		return field.value / 1000;
+	}
+
+	function nanosecondToMillisecond(field) {
+		return field.value / 1e+6;
+	}
+
+	function nanosecondToSecond(field) {
+		return field.value / 1e+9;
+	}
+
+	function nanosecondToMinute(field) {
+		return field.value / 6e+10;
+	}
+
+	function nanosecondToHour(field) {
+		return field.value / 3.6e+12;
+	}
+
+	function nanosecondToDay(field) {
+		return field.value / 8.64e+13;
+	}
+
+	function nanosecondToWeek(field) {
+		return field.value / 6.048e+14;
+	}
+
+	function nanosecondToMonth(field) {
+		return field.value / 2.628e+15;
+	}
+
+	function nanosecondToCalendarYear(field) {
+		return field.value / 3.154e+16;
+	}
+
+	function nanosecondToDecade(field) {
+		return field.value / 3.154e+17;
+	}
+
+	function nanosecondToCentury(field) {
+		return field.value / 3.154e+18;
+	}
+
+	function microsecondToNanosecond(field) {
+		return field.value * 1000;
+	}
+
+	function microsecondToMillisecond(field) {
+		return field.value / 1000;
+	}
+
+	function microsecondToSecond(field) {
+		return field.value / 1e+6;
+	}
+
+	function microsecondToMinute(field) {
+		return field.value / 6e+7;
+	}
+
+	function microsecondToHour(field) {
+		return field.value / 3.6e+9;
+	}
+
+	function microsecondToDay(field) {
+		return field.value / 8.64e+10;
+	}
+
+	function microsecondToWeek(field) {
+		return field.value / 6.048e+11;
+	}
+
+	function microsecondToMonth(field) {
+		return field.value / 2.628e+12;
+	}
+
+	function microsecondToCalendarYear(field) {
+		return field.value / 3.154e+13;
+	}
+
+	function microsecondToDecade(field) {
+		return field.value / 3.154e+14;
+	}
+
+	function microsecondToCentury(field) {
+		return field.value / 3.154e+15;
+	}
+
+	function millisecondToNanosecond(field) {
+		return field.value * 1e+6;
+	}
+
+	function millisecondToMicrosecond(field) {
+		return field.value * 1000;
+	}
+
+	function millisecondToSecond(field) {
+		return field.value / 1000;
+	}
+
+	function millisecondToMinute(field) {
+		return field.value / 60000;
+	}
+
+	function millisecondToHour(field) {
+		return field.value / 3.6e+6;
+	}
+
+	function millisecondToDay(field) {
+		return field.value / 8.64e+7;
+	}
+
+	function millisecondToWeek(field) {
+		return field.value / 6.048e+8;
+	}
+
+	function millisecondToMonth(field) {
+		return field.value / 2.628e+9;
+	}
+
+	function millisecondToCalendarYear(field) {
+		return field.value / 3.154e+10;
+	}
+
+	function millisecondToDecade(field) {
+		return field.value / 3.154e+11;
+	}
+
+	function millisecondToCentury(field) {
+		return field.value / 3.154e+12;
+	}
+
+	function secondToNanosecond(field) {
+		return field.value * 1e+9;
+	}
+
+	function secondToMicrosecond(field) {
+		return field.value * 1e+6;
+	}
+
+	function secondToMillisecond(field) {
+		return field.value / 1000;
+	}
+
+	function secondToMinute(field) {
+		return field.value / 60;
+	}
+
+	function secondToHour(field) {
+		return field.value / 3600;
+	}
+
+	function secondToDay(field) {
+		return field.value / 86400;
+	}
+
+	function secondToWeek(field) {
+		return field.value / 604800;
+	}
+
+	function secondToMonth(field) {
+		return field.value / 2.628e+6;
+	}
+
+	function secondToCalendarYear(field) {
+		return field.value / 3.154e+7;
+	}
+
+	function secondToDecade(field) {
+		return field.value / 3.154e+8
+	}
+
+	function secondToCentury(field) {
+		return field.value / 3.154e+9;
+	}
+
+	function minuteToNanosecond(field) {
+		return field.value * 6e+10;
+	}
+
+	function minuteToMicrosecond(field) {
+		return field.value * 6e+7;
+	}
+
+	function minuteToMillisecond(field) {
+		return field.value * 60000;
+	}
+
+	function minuteToSecond(field) {
+		return field.value * 60; 
+	}
+
+	function minuteToHour(field) {
+		return field.value / 60;
+	}
+
+	function minuteToDay(field) {
+		return field.value / 1440;
+	}
+
+	function minuteToWeek(field) {
+		return field.value / 10080;
+	}
+
+	function minuteToMonth(field) {
+		return field.value / 43800;
+	}
+
+	function minuteToCalendarYear(field) {
+		return field.value / 525600;
+	}
+
+	function minuteToDecade(field) {
+		return field.value / 5.256e+6;
+	}
+
+	function minuteToCentury(field) {
+		return field.value / 5.256e+7;
+	}
+
+	function hourToNanosecond(field) {
+		return field.value * 3.6e+12;
+	}
+
+	function hourToMicrosecond(field) {
+		return field.value * 3.6e+9;
+	}
+
+	function hourToMillisecond(field) {
+		return field.value * 3.6e+6;
+	}
+
+	function hourToSecond(field) {
+		return field.value * 3600;
+	}
+
+	function hourToMinute(field) {
+		return field.value * 60;
+	}
+
+	function hourToDay(field) {
+		return field.value / 24;
+	}
+
+	function hourToWeek(field) {
+		return field.value / 168;
+	}
+
+	function hourToMonth(field) {
+		return field.value / 730;
+	}
+
+	function hourToCalendarYear(field) {
+		return field.value / 8760;
+	}
+
+	function hourToDecade(field) {
+		return field.value / 87600;
+	}
+
+	function hourToCentury(field) {
+		return field.value / 876000;
+	}
+
+	function dayToNanosecond(field) {
+		return field.value * 8.64e+13;
+	}
+
+	function dayToMicrosecond(field) {
+		return field.value * 8.64e+10;
+	}
+
+	function dayToMillisecond(field) {
+		return field.value * 8.64e+7;
+	}
+
+	function dayToSecond(field) {
+		return field.value * 86400;
+	}
+
+	function dayToMinute(field) {
+		return field.value * 1440;
+	}
+
+	function dayToHour(field) {
+		return field.value * 24;
+	}
+
+	function dayToWeek(field) {
+		return field.value / 7;
+	}
+
+	function dayToMonth(field) {
+		return field.value / 30.417;
+	}
+
+	function dayToCalendarYear(field) {
+		return field.value / 365;
+	}
+
+	function dayToDecade(field) {
+		return field.value / 3650;
+	}
+
+	function dayToCentury(field) {
+		return field.value / 36500;
+	}
+
+	function weekToNanosecond(field) {
+		return field.value * 6.048e+14;
+	}
+
+	function weekToMicrosecond(field) {
+		return field.value * 6.048e+11;
+	}
+
+	function weekToMillisecond(field) {
+		return field.value * 6.048e+8;
+	}
+
+	function weekToSecond(field) {
+		return field.value * 604800;
+	}
+
+	function weekToMinute(field) {
+		return field.value * 10080;
+	}
+
+	function weekToHour(field) {
+		return field.value * 168;
+	}
+
+	function weekToDay(field) {
+		return field.value * 7;
+	}
+
+	function weekToMonth(field) {
+		return field.value / 4.345; 
+	}
+
+	function weekToCalendarYear(field) {
+		return field.value / 52.143;
+	}
+
+	function weekToDecade(field) {
+		return field.value / 521.4;
+	}
+
+	function weekToCentury(field) {
+		return field.value / 5214;
+	}
+
+	function monthToNanosecond(field) {
+		return field.value * 2.628e+15;
+	}
+
+	function monthToMicrosecond(field) {
+		return field.value * 2.628e+12;
+	}
+
+	function monthToMillisecond(field) {
+		return field.value * 2.628e+9;
+	}
+
+	function monthToSecond(field) {
+		return field.value * 2.628e+6;
+	}
+
+	function monthToMinute(field) {
+		return field.value * 43800;
+	}
+
+	function monthToHour(field) {
+		return field.value * 730;
+	}
+
+	function monthToDay(field) {
+		return field.value * 30.417;
+	}
+
+	function monthToWeek(field) {
+		return field.value * 4.345;
+	}
+
+	function monthToCalendarYear(field) {
+		return field.value / 12;
+	}
+
+	function monthToDecade(field) {
+		return field.value / 120;
+	}
+
+	function monthToCentury(field) {
+		return field.value / 1200;
+	}
+
+	function calendarYearToNanosecond(field) {
+		return field.value * 3.154e+16;
+	}
+
+	function calendarYearToMicrosecond(field) {
+		return field.value * 3.154e+13;
+	}
+
+	function calendarYearToMillisecond(field) {
+		return field.value * 3.154e+10;
+	}
+
+	function calendarYearToSecond(field) {
+		return field.value * 3.154e+7;
+	}
+
+	function calendarYearToMinute(field) {
+		return field.value * 525600;
+	}
+
+	function calendarYearToHour(field) {
+		return field.value * 8760;
+	}
+
+	function calendarYearToDay(field) {
+		return field.value * 365;
+	}
+
+	function calendarYearToWeek(field) {
+		return field.value * 52.143;
+	}
+
+	function calendarYearToMonth(field) {
+		return field.value * 12;
+	}
+
+	function calendarYearToDecade(field) {
+		return field.value / 10;
+	}
+
+	function calendarYearToCentury(field) {
+		return field.value / 100;
+	}
+
+	function decadeToNanosecond(field) {
+		return field.value * 3.154e+17;
+	}
+
+	function decadeToMicrosecond(field) {
+		return field.value * 3.154e+14;
+	}
+
+	function decadeToMillisecond(field) {
+		return field.value * 3.154e+11;
+	}
+
+	function decadeToSecond(field) {
+		return field.value * 3.154e+8;
+	}
+
+	function decadeToMinute(field) {
+		return field.value * 5.256e+6;
+	}
+
+	function decadeToHour(field) {
+		return field.value * 87600;
+	}
+
+	function decadeToDay(field) {
+		return field.value * 3650;
+	}
+
+	function decadeToWeek(field) {
+		return field.value * 521.4;
+	}
+
+	function decadeToMonth(field) {
+		return field.value * 120;
+	}
+
+	function decadeToCalendarYear(field) {
+		return field.value * 10;
+	}
+
+	function decadeToCentury(field) {
+		return field.value / 10;
+	}
+
+	function centuryToNanosecond(field) {
+		return field.value * 3.154e+18;
+	}
+
+	function centuryToMicrosecond(field) {
+		return field.value * 3.154e+15;
+	}
+
+	function centuryToMillisecond(field) {
+		return field.value * 3.154e+12;
+	}
+
+	function centuryToSecond(field) {
+		return field.value * 3.154e+9;
+	}
+
+	function centuryToMinute(field) {
+		return field.value * 5.256e+7;
+	}
+
+	function centuryToHour(field) {
+		return field.value * 876000;
+	}
+
+	function centuryToDay(field) {
+		return field.value * 36500;
+	}
+
+	function centuryToWeek(field) {
+		return field.value * 5214;
+	}
+
+	function centuryToMonth(field) {
+		return field.value * 1200;
+	}
+
+	function centuryToCalendarYear(field) {
+		return field.value * 100;
+	}
+
+	function centuryToDecade(field) {
+		return field.value * 10;
 	}
 });
